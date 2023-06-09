@@ -56,7 +56,9 @@ export class AppComponent implements OnInit {
     }
 
     markHasFish(tile: Tile) {
-        tile.hasFish = !tile.hasFish;
+        if (!tile.isBaseTile && !tile.isCenterTile) {
+            tile.hasFish = !tile.hasFish;
+        }
     }
 
     findOptimalFirstPath(tile: Tile) {
