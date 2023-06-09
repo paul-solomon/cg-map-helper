@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.tile {
+    cursor: pointer;
+    background-color: burlywood;
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+    &.center-tile {
+        background-image: url('https://oldschool.runescape.wiki/images/Crystalline_Hunllef.png?7737a');
+        background-size: 90%;
+    }
+    &.base-tile {
+        background-color: darkolivegreen;
+    }
+    &.initial-path {
+        background-color: chocolate;
+    }
+    &.potential-demiboss {
+        background-color: darkgoldenrod;
+    }
+    &.has-fish {
+        background-image: url('https://oldschool.runescape.wiki/images/Fishing_icon_%28detail%29.png?a4903');
+        background-size: 60%;
+    }
+    background-repeat: no-repeat;
+
+    background-position: center center;
+}
+
+.reset {
+    border: none;
+    cursor: pointer;
+    margin-top: 2rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: burlywood;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 25px;
+}

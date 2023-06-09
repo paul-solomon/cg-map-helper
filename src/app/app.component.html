@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="grid">
+        <div
+            *ngFor="let tile of tiles"
+            class="tile"
+            [class.center-tile]="tile.isCenterTile"
+            [class.base-tile]="tile.isBaseTile"
+            [class.initial-path]="tile.initialPath"
+            [class.potential-demiboss]="tile.potentialDemiBoss"
+            [class.has-fish]="tile.hasFish"
+            (click)="onTileClick(tile)"
+        ></div>
+    </div>
+    <button class="reset" (click)="reset()">Reset</button>
+</div>
